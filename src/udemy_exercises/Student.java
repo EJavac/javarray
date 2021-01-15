@@ -64,9 +64,15 @@ public class Student {
         int number = getNumbersOfMarks();
         return new BigDecimal(sum).divide(new BigDecimal(number), 2, RoundingMode.UP);
     }
-    public String toString(){
-        return name + marks ;
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", marks=" + marks +
+                '}';
     }
+
     public void addNewMark(int mark){
         marks.add(mark);
     }
@@ -75,4 +81,5 @@ public class Student {
     public void removeIndexMark(int i) {
         marks.remove(i);
     }
+
 }
