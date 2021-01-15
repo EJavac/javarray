@@ -65,14 +65,6 @@ public class Student {
         return new BigDecimal(sum).divide(new BigDecimal(number), 2, RoundingMode.UP);
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", marks=" + marks +
-                '}';
-    }
-
     public void addNewMark(int mark){
         marks.add(mark);
     }
@@ -82,4 +74,11 @@ public class Student {
         marks.remove(i);
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", marks=" + marks +
+                '}';
+    }
 }
